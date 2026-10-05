@@ -12,7 +12,15 @@
 <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="images/hero.webp">
 
-<!-- Google Ads / GTM: ضع كود التتبع هنا (gtag.js) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18490125410"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18490125410');
+</script>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"GeneralContractor","name":"Company AL SAQAR WORLD - شركة إيه إل إس آي كيو آر وورلد",
@@ -656,6 +664,21 @@ var lb=document.getElementById('lb');
 document.querySelectorAll('#gallery figure').forEach(function(g){g.addEventListener('click',function(){lb.querySelector('img').src=g.querySelector('img').src;lb.classList.add('on');});});
 lb.addEventListener('click',function(){lb.classList.remove('on');});
 document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+<!-- Google Ads conversion: call + WhatsApp clicks (no jQuery needed) -->
+<script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('tel:') === 0 || h.indexOf('wa.me') > -1) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18490125410/4uy4CKuNiZIdEOLY4_BE'
+        });
+      }
+    }
+  });
 </script>
 </body>
 </html>
